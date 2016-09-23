@@ -1,4 +1,4 @@
-##A lexical analyzer for A2-Lexicon programming language
+#A Lexical Analyzer for A2-Lexicon
 
 Author: Angel Jimenez
 
