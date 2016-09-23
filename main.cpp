@@ -106,7 +106,7 @@ int getCode(string s);
 
 int main() {
     
-    file = fopen("punctuation.txt", "r");
+    file = fopen("program.txt", "r");
     if (file == nullptr) { perror("Error opening file."); }
     do {
         nextChar = getc(file);
