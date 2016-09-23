@@ -1,13 +1,16 @@
-#CPSC 323 Project 1:
-##A Lexical Analyzer for A2-Lexicon Programming Language
+##A lexical analyzer for A2-Lexicon programming language
 
 Author: Angel Jimenez
 
 Email: Ajl890889702@csu.fullerton.edu
 
-Class: 323 Section 85 Fall 2016
-
 Github: Github.com/ajimmer
+
+Files: 
+* main.cpp :  Source code for tokenizing input
+* program.txt : Text file where could can be written according to A2-Lexicon Specifications
+* Makefile : Needed when compiling in the command line
+
 
 ##General Usage Notes:
 
@@ -19,14 +22,27 @@ Github: Github.com/ajimmer
 
 * This program is designed for the user to write code into the provided text file and compiling it in an IDE or through the command line. After successfully compiling and processing the input the program will display information on the produced tokens in order to be used for Syntactic Analysis.
 
+
+##Features
+
+* Functioning Automatons recieve input from the text file character by character. 
+* Input is processed in real time and assigned a token value according to the entry.
+* Processed information is displayed to the console to be analyzed by the user for future use in developing a parser in Syntactic Analysis
+* Debugging can be accomplished by uncommenting the print statements throughout the code, or using the debugger.
+
+##Bugs
+
+* Although not thouroghly tested, all features work accoriding to given examples in specification.
+* Further testing maybe necessary to find issues 
+* Refactoring and optimization are still necessary
+
 ##How To Run
 
 1. First, download or clone the repository https://github.com/aJimmer/A2-lexer to your preferred location.
 
 2. Navigate to the directory via the command line.
 
-3. Run the *MAKEFILE* by typing "make" into the command line.
+3. Run the **MAKEFILE** by typing "make" into the command line.
 
-4. Run the *MAIN* process by typing in "./main program.txt"
+4. Run the **MAIN** process by typing in "./main program.txt"
 
-Screenshot:  
