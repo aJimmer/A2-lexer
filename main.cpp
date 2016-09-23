@@ -1,10 +1,13 @@
-//
-//  main.cpp
-//  Punctuation
-//
-//  Created by Angel on 9/16/16.
-//  Copyright © 2016 Angel Jimenez. All rights reserved.
-//
+
+// **********************************************
+// Author: Angel Jimenez
+// **********************************************
+// Email: Ajl890889702@csu.fullerton.edu
+// **********************************************
+// main.cpp: A hand built lexer that takes in an
+// A2 language program written in a text file and
+// produces tokens to be used in Syntax Analysis.
+// **********************************************
 
 #include <iostream>
 #include <fstream>
