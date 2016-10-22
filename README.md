@@ -27,7 +27,8 @@ Files:
 
 * Functioning Automatons recieve input from the text file character by character. 
 * Input is processed in real time and assigned a token value according to the entry.
-* Processed information is displayed to the console to be analyzed by the user for future use in developing a parser in Syntactic Analysis
+* The tokenized input is processed by the parse machine.
+* Output is displayed according to the tokens in a stack vs factored non-terminals according to the grammar
 * Debugging can be accomplished by uncommenting the print statements throughout the code, or using the debugger.
 
 ##Bugs
