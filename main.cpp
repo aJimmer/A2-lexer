@@ -51,13 +51,8 @@ int getCode(string s);
 
 /* Regex Codes */
 #define COMMENT 1
-#define ID 2
-#define INT 3
-#define FLOAT 4
-#define STRING 5
 
 /* Key Words */
-#define KWDPROG 10      // "prog"
 #define KWDMAIN 11      // "main"
 #define KWDFCN 12       // "fcn"
 #define KWDCLASS 13     // "class"
@@ -69,31 +64,18 @@ int getCode(string s);
 #define KWDELSE 20      // "else"
 #define KWDWHILE 21     // "while"
 #define KWDINPUT 22     // "input"
-#define KWDPRINT 23     // "print"
 #define KWDNEW 24       // "new"
 #define KWDRETURN 25    // "return"
 
 /* Paired Delimiters */
 #define ANGLE1 31       // '<'
 #define ANGLE2 32       // '>'
-#define BRACE1 33       // '{'
-#define BRACE2 34       // '}'
 #define BRACKET1 35     // '['
 #define BRACKET2 36     // ']'
-#define PAREN1 37      // '('
-#define PAREN2 38      // ')'
 
 /* Other Punctuation */
-#define COMMA 6         // ","
-#define SEMI 7          // ";"
-#define ASTER 41        // '*'
-#define CARET 42        // '^'
 #define COLON 43        // ':'
 #define DOT 44          // '.'
-#define EQUAL 45        // '='
-#define MINUS 46        // '-'
-#define PLUS 47         // '+'
-#define SLASH 48        // '/'
 
 /* Multi-char Operators */
 #define OPARROW 51      // '->'
@@ -137,7 +119,7 @@ int main() {
         
     } while (nextChar != EOF);
     
-    cout << "(Tok: id= " << eof << " line = " << lineCount << " str= \"\")" << endl;
+    //cout << "(Tok: id= " << eof << " line = " << lineCount << " str= \"\")" << endl;
     input.push_back(Symbol(eof,"$", "", true));
     
     cout << "Starting parse machine...\n";
@@ -459,19 +441,19 @@ void terminateStateRegex(){
     
     lexCode = getRegexCode(lex);
     if(lexCode == INT){
-        cout << "(Tok: id= " << lexCode << " line = " << lineCount << "" << " str= \"" << lex << "\" int= "<< lex << ")" << endl;
+        //cout << "(Tok: id= " << lexCode << " line = " << lineCount << "" << " str= \"" << lex << "\" int= "<< lex << ")" << endl;
         input.push_back(Symbol(lexCode,"int", "", true));
     }
     else if(lexCode == FLOAT){
-        cout << "(Tok: id= " << lexCode << " line = " << lineCount << " str= \"" << lex << "\" float= "<< lex << ")" << endl;
+        //cout << "(Tok: id= " << lexCode << " line = " << lineCount << " str= \"" << lex << "\" float= "<< lex << ")" << endl;
         input.push_back(Symbol(lexCode,"float", "", true));
     }
     else if (lexCode == STRING){
-        cout << "(Tok: id= " << lexCode << " line = " << lineCount << " str= " << lex << ")" << endl;
+        //cout << "(Tok: id= " << lexCode << " line = " << lineCount << " str= " << lex << ")" << endl;
         input.push_back(Symbol(lexCode,"string", "", true));
     }
     else if(lexCode != COMMENT){
-        cout << "(Tok: id= " << lexCode << " line = " << lineCount << " str= \"" << lex << "\")" << endl;
+        //cout << "(Tok: id= " << lexCode << " line = " << lineCount << " str= \"" << lex << "\")" << endl;
         input.push_back(Symbol(lexCode,"id", "", true));
     }
     
@@ -514,7 +496,7 @@ void terminateState(){
     
     lexCode = getCode(lex);
     if(lexCode != ERROR){
-        cout << "(Tok: id= " << lexCode << " line = " << lineCount << " str= \"" << lex << "\")" << endl;
+        //cout << "(Tok: id= " << lexCode << " line = " << lineCount << " str= \"" << lex << "\")" << endl;
         input.push_back(Symbol(lexCode,lex, "", true));
     }
     memset(&lexeme, 0, 100);

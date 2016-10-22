@@ -70,8 +70,7 @@ public:
         
         
         /* RULES BUILT BY HAND TO REDUCE ERRORS */
-        
-        cout << "Building rules...!\n";
+        /* RULE FORMAT: Rule: Symbol(LHS) => {Symbol(RHS), Symbol(RHS), Symbol(RHS)}*/
         
         /* RULE 1 */
         
@@ -287,36 +286,6 @@ public:
         };
         rules[23] = Rule(OPMUL, lhs24, rhs24, 1);
         
-        /* print rules
-         
-         for(int i = 0; i < 24; i++){
-         rules[i].print();
-         }*/
-        
-        cout << "Rules built successfully.." << endl;
-        
-    }
-    void buildStream(){
-        
-        input.push_back(Symbol(eof,"$","", true));
-        input.push_back(Symbol(BRACE2,"}","", true));
-        input.push_back(Symbol(SEMI,";","", true));
-        input.push_back(Symbol(PAREN2,")","", true));
-        input.push_back(Symbol(INT,"int","", true));
-        input.push_back(Symbol(COMMA,",","", true));
-        input.push_back(Symbol(STRING,"string","", true));
-        input.push_back(Symbol(COMMA,",","", true));
-        input.push_back(Symbol(INT,"int","", true));
-        input.push_back(Symbol(COMMA,",","", true));
-        input.push_back(Symbol(STRING,"string","", true));
-        input.push_back(Symbol(COMMA,",","", true));
-        input.push_back(Symbol(STRING,"string","", true));
-        input.push_back(Symbol(PAREN1,"(","", true));
-        input.push_back(Symbol(KWDPRINT,"print","", true));
-        input.push_back(Symbol(BRACE1,"{","", true));
-        input.push_back(Symbol(KWDPROG,"prog","", true));
-        
-        cout << "Input stack built successfully...\n";
     }
     
     void printStack(const vector<Symbol>& stack ){
@@ -332,14 +301,12 @@ public:
         printStack(stack);
     }
     void pushRevRHS(Symbol s[], int size){
-        for( int i = size-1; i >=
-            0; i-- ){
+        for( int i = size-1; i >= 0; i-- ){
             stack.push_back(s[i]);
         }
     }
     void start(){
         buildRules();
-        //buildStream();
         Symbol eof_ = Symbol(eof,"$", "", true);
         //push eof
         stack.push_back(eof_);

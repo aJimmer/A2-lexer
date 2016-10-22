@@ -33,7 +33,7 @@ public:
         
     }
     void print(){
-        // cout << "ID: " << ruleID; // outputs Lhs enumeration value
+        
         cout << lhs << "=> ";
         
         for(int i = 0; i < size; i++) {

@@ -33,6 +33,7 @@ using namespace std;
 #define PLUS 47        // '+'
 #define SLASH 48        // '/'
 #define ERROR  99       // Unknown token
+#define EPS 1000
 
 class Symbol{
 public:
